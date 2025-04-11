@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/hero-background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+/* About Section */
+.about {
+    padding: 20px;
+}
+
+/* Destinations Section */
+.destinations {
+    padding: 20px;
+}
+
+.destination-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Packages Section */
+.packages {
+    padding: 20px;
+}
+
+.package-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 20px;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
