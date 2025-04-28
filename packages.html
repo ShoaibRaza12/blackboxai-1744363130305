@@ -22,26 +22,44 @@
     <main>
         <section class="packages">
             <h2>Travel Packages</h2>
-            <div class="package-card">
-                <h4>Package Title</h4>
-                <p>Duration: 7 Days / 6 Nights</p>
-                <p>Price: $999</p>
-                <p>Inclusions: Hotel, Meals, Transport, Guide</p>
-                <a href="#" class="booking-button">Book Now</a>
+            <div id="packages-container" class="packages-container">
+                <!-- Dynamic packages will be loaded here -->
             </div>
-            <div class="package-card">
-                <h4>Package Title</h4>
-                <p>Duration: 5 Days / 4 Nights</p>
-                <p>Price: $799</p>
-                <p>Inclusions: Hotel, Meals, Transport, Guide</p>
-                <a href="#" class="booking-button">Book Now</a>
-            </div>
-            <div class="package-card">
-                <h4>Package Title</h4>
-                <p>Duration: 10 Days / 9 Nights</p>
-                <p>Price: $1499</p>
-                <p>Inclusions: Hotel, Meals, Transport, Guide</p>
-                <a href="#" class="booking-button">Book Now</a>
+
+            <!-- Booking Modal -->
+            <div id="booking-modal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="modal-content bg-white p-6 rounded shadow-lg w-full max-w-md">
+                    <h3 class="text-xl font-semibold mb-4">Book Package</h3>
+                    <form id="booking-form" class="space-y-4">
+                        <input type="hidden" id="package-id" name="package_id" />
+                        <div>
+                            <label for="name" class="block font-medium">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded px-3 py-2" />
+                        </div>
+                        <div>
+                            <label for="email" class="block font-medium">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded px-3 py-2" />
+                        </div>
+                        <div>
+                            <label for="dates" class="block font-medium">Travel Dates</label>
+                            <input type="text" id="dates" name="dates" placeholder="YYYY-MM-DD to YYYY-MM-DD" required class="w-full border border-gray-300 rounded px-3 py-2" />
+                        </div>
+                        <div>
+                            <label for="people" class="block font-medium">Number of People</label>
+                            <input type="number" id="people" name="people" min="1" value="1" required class="w-full border border-gray-300 rounded px-3 py-2" />
+                        </div>
+                        <div>
+                            <label for="payment-method" class="block font-medium">Payment Method</label>
+                            <select id="payment-method" name="payment_method" required class="w-full border border-gray-300 rounded px-3 py-2">
+                                <option value="">Select a payment method</option>
+                                <option value="stripe">Stripe</option>
+                                <option value="paypal">PayPal</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Submit Booking</button>
+                        <button type="button" id="close-modal" class="ml-2 bg-gray-300 px-4 py-2 rounded hover:bg-gray-400 transition">Cancel</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
