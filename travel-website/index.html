@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Agency</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/travel-website/pwa-sw.js').then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }).catch(error => {
+                    console.log('ServiceWorker registration failed: ', error);
+                });
+            });
+        }
+    </script>
+</head>
+<body class="font-roboto bg-gray-50">
+    <header>
+        <nav class="navbar bg-blue-700 text-white p-4 flex justify-between items-center shadow-md">
+            <div class="text-2xl font-extrabold tracking-wide">Travel Agency</div>
+            <ul class="flex space-x-6 text-lg">
+                <li><a href="index.html" class="hover:underline hover:text-yellow-300 transition">Home</a></li>
+                <li><a href="about.html" class="hover:underline hover:text-yellow-300 transition">About Us</a></li>
+                <li><a href="destinations.html" class="hover:underline hover:text-yellow-300 transition">Destinations</a></li>
+                <li><a href="packages.html" class="hover:underline hover:text-yellow-300 transition">Packages</a></li>
+                <li><a href="testimonials.html" class="hover:underline hover:text-yellow-300 transition">Testimonials</a></li>
+                <li><a href="contact.html" class="hover:underline hover:text-yellow-300 transition">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="p-8">
+        <section class="hero relative rounded-lg overflow-hidden shadow-lg bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 px-8 text-center">
+            <h1 class="text-5xl font-extrabold mb-6 drop-shadow-lg">Explore the Beauty of the UK & Pakistan with Us</h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto drop-shadow-md">Discover unforgettable travel experiences with our curated tours and packages designed for every adventurer.</p>
+            <a href="packages.html" class="inline-block bg-yellow-400 text-blue-900 font-bold px-8 py-4 rounded-full shadow-lg hover:bg-yellow-500 transition">View Packages</a>
+            <div class="absolute inset-0 opacity-20 bg-[url('/images/hero-background.jpg')] bg-cover bg-center"></div>
+        </section>
+    </main>
+    <footer class="bg-blue-700 text-white text-center p-6 mt-12">
+        <p>&copy; 2023 Travel Agency. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
