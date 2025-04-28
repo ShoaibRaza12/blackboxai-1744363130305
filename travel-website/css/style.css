@@ -1,0 +1,92 @@
+/* Custom styles for the travel agency website */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9fafb;
+    color: #374151;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2563eb;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #374151;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+.hero {
+    background-image: url('../images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 1rem;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.feature {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 30%;
+}
+
+.feature i {
+    font-size: 3rem;
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    color: #6b7280;
+    margin-top: 4rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature {
+        width: 80%;
+        margin-bottom: 1.5rem;
+    }
+}
